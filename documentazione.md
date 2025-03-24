@@ -58,7 +58,10 @@ SSH permette la comunicazione sicura fra due dispositivi attraverso un canale cr
 Su [pfSense](#pfsense) è stata impostata una regola di port forwarding per l'accesso al server ubuntu da cattedra.
 
 ### VPN
-
+![](img/vpn/confScreen1.png)
+![](img/vpn/confScreen2.png)
+![](img/vpn/confScreen3.png)
+![](img/vpn/confScreen4.png)
 
 ## Server Windows
 Il server Windows rende disponibili diversi servizi, tra cui DNS, Active Directory e RADIUS.\
@@ -85,6 +88,23 @@ Sono state configurate le seguenti Group Policy:
 * Eliminare l'opzione spegnimento per gli utenti
 
 ### RADIUS
+Il server Windows viene configurato come server Radius, questo viene fatto per pfsense che riuscirà ad appoggiarsi al server per l'autenticazione.\
+Questo passaggio viene fatto per configurare una rete OpenVPN, per eseguire una connessione di tipo VPN Host to LAN.\
+Viene configurato l'indirizzo sul quale si deve appogiare, ovvero pfsense, e la chiave segreta "pfsense":
+![screen_radius](https://github.com/user-attachments/assets/3466b418-79d3-4c7a-9d15-446fcec1f42e)
+
+Dopo questo passaggio per configurare OpenVPN, creiamo un nuovo certificato di autorità
+![CA Certicate OPENVPN 1](https://github.com/user-attachments/assets/e2be35ff-db5c-43f8-ae14-d0f41c7d97b7)
+
+Creiamo un'altro certificato, ma questo è per il Server Radius:
+![CA Certicate OPENVPN Server 2](https://github.com/user-attachments/assets/e6303e5c-3223-49f7-86f2-6f4871591026)
+![Server set up Open VPN 3](https://github.com/user-attachments/assets/117bc28a-26f5-4e33-b9b7-5e16349f6022)
+![Server set up Open VPN 4 (1)](https://github.com/user-attachments/assets/a06247e8-ec39-40bc-9f7f-4d0a9b9eb64e)
+![Server Set Up Open VPN 5](https://github.com/user-attachments/assets/f7358ae5-c66b-4bcf-9a43-caf055943dd8)
+![Server Set Up Open VPN 6](https://github.com/user-attachments/assets/ceda7658-f547-465d-988e-ae14b4ff4ec2)
+
+L'ultimo passaggio consiste nel configurare le regole del firewall:
+![Firewall Rule Configuration 7](https://github.com/user-attachments/assets/53ff43b3-ffab-49f5-93e9-f5f533667545)
 
 ## Server ubuntu
 Il server ubuntu ospita le pagine web del dominio `fila2.it`. Sono disponibili sia pagine HTTP che HTTPS.\
