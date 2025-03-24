@@ -79,6 +79,7 @@ Le configurazioni di Active Directory permettono la gestione centralizzata degli
 Sono state configurate le seguenti Group Policy:
 * Impedure agli utenti di installare nuove stampanti
 * Impedire la visualizzazione del nome dell’ultimo utente che si è connesso sui pc client
+* Eliminare l'opzione spegnimento per gli utenti
 
 ### RADIUS
 
