@@ -40,6 +40,7 @@ Tutti gli altri PC hanno indirizzi IP dinamici, stabiliti dalle regole [DHCP](#d
 ## pfSense
 PfSense è un server basato su FreeBSD che svolge la funzione di firewall e gateway per la rete interna.\
 É stato impostato il port forwarding su pfSense per consentire la visualizzazione dei siti da parte dei client esterni alla rete.
+![Configurazione port forwarding](/img/port-forwarding/confPortFwd.png)
 
 ### DHCP
 Rete: `172.22.0.0/16`\
