@@ -57,6 +57,9 @@ Gateway: `172.22.0.1`\
 SSH permette la comunicazione sicura fra due dispositivi attraverso un canale crittografato con chiavi asimmetriche.\
 Su [pfSense](#pfsense) è stata impostata una regola di port forwarding per l'accesso al server ubuntu da cattedra.
 
+### VPN
+
+
 ## Server Windows
 Il server Windows rende disponibili diversi servizi, tra cui DNS, Active Directory e RADIUS.\
 I servizi attivi vengono gestiti tramite l'aggiunta di ruoli e funzionalità, disponibili in `Server Manager`.
@@ -79,10 +82,13 @@ Le configurazioni di Active Directory permettono la gestione centralizzata degli
 Sono state configurate le seguenti Group Policy:
 * Impedure agli utenti di installare nuove stampanti
 * Impedire la visualizzazione del nome dell’ultimo utente che si è connesso sui pc client
+* Eliminare l'opzione spegnimento per gli utenti
 
 ### RADIUS
 
 ## Server ubuntu
+Il server ubuntu ospita le pagine web del dominio `fila2.it`. Sono disponibili sia pagine HTTP che HTTPS.\
+La distro installata è Ubuntu server 24.04. è consigliabile collegarsi alla macchina tramite SSH in quanto la VM risulta molto lenta.
 
 ### NGINX
 I file di configurazione sono all'interno di `/etc/nginx`.
