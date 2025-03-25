@@ -5,16 +5,16 @@ Indice:
 1. [Utenti e password](#utenti-e-password)
 2. [Configurazione rete](#configurazione-rete)
 3. [pfSense](#pfsense)
-	* [DHCP](#dhcp)
-	* [SSH](#ssh)
-	* [VPN](#vpn)
+    * [DHCP](#dhcp)
+    * [SSH](#ssh)
+    * [VPN](#vpn)
 4. [Server Windows](#server-windows)
-	* [DNS](#dns)
-	* [Active Directory](#active-directory)
-	* [RADIUS](#radius)
-6. [Server Ubuntu](#server-ubuntu)
-	* [Nginx](#nginx)
-	* [Bind9 (router cattedra)](#bind9)
+    * [DNS](#dns)
+    * [Active Directory](#active-directory)
+    * [RADIUS](#radius)
+5. [Server Ubuntu](#server-ubuntu)
+    * [Nginx](#nginx)
+    * [Bind9 (router cattedra)](#bind9)
 
 ## Utenti e password
 | Device                                              |       Username        |  Password   |
@@ -53,6 +53,9 @@ DNS servers:
 Gateway: `172.22.0.1`\
 [Domain name](#active-directory): `5c.fila2.it`
 
+Schermata:
+![Schermata di pfSense web per la configurazione base del server DHCP](img/dhcp/confDHCP.png)
+
 ### SSH
 SSH permette la comunicazione sicura fra due dispositivi attraverso un canale crittografato con chiavi asimmetriche.\
 Su [pfSense](#pfsense) è stata impostata una regola di port forwarding per l'accesso al server ubuntu da cattedra.
@@ -83,9 +86,9 @@ Il file `named.conf.local` è stato inserito nella zona per `sito2vecchio.com`.
 ### Active Directory
 Le configurazioni di Active Directory permettono la gestione centralizzata degli utenti, dei loro permessi e delle regole all'interno di un dominio di dispositivi.\
 Sono state configurate le seguenti Group Policy:
-* Impedure agli utenti di installare nuove stampanti
+* Impedire agli utenti di installare nuove stampanti
 * Impedire la visualizzazione del nome dell’ultimo utente che si è connesso sui pc client
-* Eliminare l'opzione spegnimento per gli utenti
+* Eliminare l'opzione spegnimento per gli utenti dal menù Start
 
 ### RADIUS
 Il server Windows viene configurato come server Radius, questo viene fatto per pfsense che riuscirà ad appoggiarsi al server per l'autenticazione.\
