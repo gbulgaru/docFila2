@@ -68,7 +68,9 @@ Su [pfSense](#pfsense) è stata impostata una regola di port forwarding per l'ac
 ![](img/vpn/confScreen4.png)
 
 ### DMZ 
-Su pfsense in interfaces/Interface Assignments è stata creata una nuova interfaccia DMZ, dopo aver creato e impostato una network port VLAN 10, e impostato l'indirizzo 192.168.2.1/24
+Si vuole configurare una DMZ su PfSense dove spostare il server Ubuntu con i siti.
+Su pfsense in interfaces/Interface Assignments è stata creata una nuova interfaccia DMZ, dopo aver creato e impostato una network port VLAN 10, e impostato l'indirizzo 192.168.2.1/24.
+
 ![Configurazione DMZ](img/dmz/confDMZ1.png)
 
 ## Server Windows
