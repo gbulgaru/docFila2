@@ -35,7 +35,8 @@ I server hanno indirizzi IP statici:
 * PfSense -> `172.22.0.1`
 * Windows server -> `172.22.0.2`
 * Windows server (backup) -> `172.22.0.3`
-* Ubuntu server -> `172.22.0.4`\
+* Ubuntu server -> `172.22.0.4`
+
 Tutti gli altri PC hanno indirizzi IP dinamici, stabiliti dalle regole [DHCP](#dhcp).
 
 ## pfSense
@@ -67,8 +68,10 @@ Su [pfSense](#pfsense) è stata impostata una regola di port forwarding per l'ac
 ![](img/vpn/confScreen3.png)
 ![](img/vpn/confScreen4.png)
 
-### DMZ 
-Su pfsense in interfaces/Interface Assignments è stata creata una nuova interfaccia DMZ, dopo aver creato e impostato una network port VLAN 10, e impostato l'indirizzo 192.168.2.1/24
+### DMZ
+Si vuole configurare una DMZ su PfSense dove spostare il server Ubuntu con i siti.
+Su pfsense in interfaces/Interface Assignments è stata creata una nuova interfaccia DMZ, dopo aver creato e impostato una network port VLAN 10, e impostato l'indirizzo 192.168.2.1/24.
+
 ![Configurazione DMZ](img/dmz/confDMZ1.png)
 
 ## Server Windows
@@ -132,8 +135,8 @@ I file di configurazione sono all'interno di `/etc/nginx`.
 NGINX gestisce le configurazioni dei siti tramite file di testo.\
 Nella cartella `sites-available` sono presenti i file di configurazione (.conf) dei siti gestiti da NGINX.\
 Nella cartella `sites-enabled` sono presenti i symlink ai file .conf di `sites-available`.\
-La gestione dei siti abilitati tramite symlink permette di risparmiare risorse e 
-sincronizzare automaticamente le modifiche ai file di configurazione.
+La gestione dei siti abilitati tramite symlink permette di risparmiare risorse e sincronizzare automaticamente
+le modifiche ai file di configurazione.
 
 I file dei siti sono divisi per area del sito (anteporre a fila2.it) e contenuti in `/var/www/html`:
 * `corsini/corsini.html`
@@ -141,9 +144,7 @@ I file dei siti sono divisi per area del sito (anteporre a fila2.it) e contenuti
 * `serafini/serafini.html`
 * `fila2/fila2.html`
 
-`www.fila2.it` contiene una pagina di login gestita con PHP.
-
-`www.fila2.it` accetta solo richieste HTTPS (aperta la porta 443).\
+`www.fila2.it` contiene una pagina di login gestita con PHP e accetta solo richieste HTTPS (aperta la porta 443).\
 File .conf di `www.fila2.it`:
 ![File di configurazione NGINX per un sito standard](img/nginx/conf-www.fila2.it.png)
 
