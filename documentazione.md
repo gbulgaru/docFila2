@@ -8,6 +8,7 @@ Indice:
     * [DHCP](#dhcp)
     * [SSH](#ssh)
     * [VPN](#vpn)
+    * [DMZ](#dmz)
 4. [Server Windows](#server-windows)
     * [DNS](#dns)
     * [Active Directory](#active-directory)
@@ -65,6 +66,9 @@ Su [pfSense](#pfsense) è stata impostata una regola di port forwarding per l'ac
 ![](img/vpn/confScreen2.png)
 ![](img/vpn/confScreen3.png)
 ![](img/vpn/confScreen4.png)
+
+### DMZ 
+Su pfsense in interfaces/Interface Assignments è stata creata una nuova interfaccia DMZ, dopo aver creato e impostato una network port VLAN 10, e impostato l'indirizzo 192.168.2.1/24
 
 ## Server Windows
 Il server Windows rende disponibili diversi servizi, tra cui DNS, Active Directory e RADIUS.\
