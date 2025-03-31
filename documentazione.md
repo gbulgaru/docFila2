@@ -41,7 +41,7 @@ Tutti gli altri PC hanno indirizzi IP dinamici, stabiliti dalle regole [DHCP](#d
 ## pfSense
 PfSense è un server basato su FreeBSD che svolge la funzione di firewall e gateway per la rete interna.\
 É stato impostato il port forwarding su pfSense per consentire la visualizzazione dei siti da parte dei client esterni alla rete.
-![Configurazione port forwarding](/img/port-forwarding/confPortFwd.png)
+![Configurazione port forwarding](img/port-forwarding/confPortFwd.png)
 
 ### DHCP
 Rete: `172.22.0.0/16`\
@@ -69,7 +69,7 @@ Su [pfSense](#pfsense) è stata impostata una regola di port forwarding per l'ac
 
 ### DMZ 
 Su pfsense in interfaces/Interface Assignments è stata creata una nuova interfaccia DMZ, dopo aver creato e impostato una network port VLAN 10, e impostato l'indirizzo 192.168.2.1/24
-![Configurazione DMZ](/img/port-forwarding/DMZ1.png)
+![Configurazione DMZ](img/dmz/confDMZ1.png)
 
 ## Server Windows
 Il server Windows rende disponibili diversi servizi, tra cui DNS, Active Directory e RADIUS.\
@@ -94,6 +94,15 @@ Sono state configurate le seguenti Group Policy:
 * Impedire agli utenti di installare nuove stampanti
 * Impedire la visualizzazione del nome dell’ultimo utente che si è connesso sui pc client
 * Eliminare l'opzione spegnimento per gli utenti dal menù Start
+
+#### Samba
+Tutti gli utenti del dominio hanno accesso ad una cartella condivisa.\
+Configurazione:
+![](img/samba/confSMB1.png)
+![](img/samba/confSMB2.png)
+![](img/samba/confSMB3.png)
+![](img/samba/confSMB4.png)
+![](img/samba/confSMB5.png)
 
 ### RADIUS
 Il server Windows viene configurato come server Radius, questo viene fatto per pfsense che riuscirà ad appoggiarsi al server per l'autenticazione.\
@@ -136,11 +145,11 @@ I file dei siti sono divisi per area del sito (anteporre a fila2.it) e contenuti
 
 `www.fila2.it` accetta solo richieste HTTPS (aperta la porta 443).\
 File .conf di `www.fila2.it`:
-![File di configurazione NGINX per un sito standard](/img/nginx/conf-www.fila2.it.png)
+![File di configurazione NGINX per un sito standard](img/nginx/conf-www.fila2.it.png)
 
 `sicuro.fila2.it` accetta le richieste HTTP e le reindirizza a `www.fila2.it` tramite HTTPS.\
 File .conf di `sicuro.fila2.it`:
-![File di configurazione NGINX per un sito sicuro](/img/nginx/conf-sicuro.fila2.it.png)
+![File di configurazione NGINX per un sito sicuro](img/nginx/conf-sicuro.fila2.it.png)
 
 ### BIND9
 BIND9 è un server DNS che permette la risoluzione dei nomi di dominio in indirizzi IP.
