@@ -69,6 +69,7 @@ Su [pfSense](#pfsense) è stata impostata una regola di port forwarding per l'ac
 
 ### DMZ 
 Su pfsense in interfaces/Interface Assignments è stata creata una nuova interfaccia DMZ, dopo aver creato e impostato una network port VLAN 10, e impostato l'indirizzo 192.168.2.1/24
+![Configurazione DMZ](/img/port-forwarding/DMZ1.png)
 
 ## Server Windows
 Il server Windows rende disponibili diversi servizi, tra cui DNS, Active Directory e RADIUS.\
