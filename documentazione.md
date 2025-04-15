@@ -128,6 +128,7 @@ Creiamo un altro certificato, ma questo è per il Server Radius:
 L'ultimo passaggio consiste nel configurare le regole del firewall:
 ![Firewall Rule Configuration 7](img/radius/confFirewall.png)
 
+![Condigurazione della policy del radius](img/radius/radiusPolicy1.png)
 ## Server ubuntu
 Il server ubuntu ospita le pagine web del dominio `fila2.it`. Sono disponibili sia pagine HTTP che HTTPS.\
 La distro installata è Ubuntu server 24.04. è consigliabile collegarsi alla macchina tramite SSH in quanto la VM risulta molto lenta.
