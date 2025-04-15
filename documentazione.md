@@ -63,8 +63,8 @@ SSH permette la comunicazione sicura fra due dispositivi attraverso un canale cr
 Su [pfSense](#pfsense) è stata impostata una regola di port forwarding per l'accesso al server ubuntu da cattedra.
 
 ### VPN
-Su pfSense abbiamo confugurato due reti VPN con fila1 e fila3. Le seguenti immagini mostrano la configurazione con la fila3, ma
-il procedimento è uguale per la configurazione con la fila
+Su pfSense abbiamo configurato due reti VPN con fila1 e fila3 e le seguenti immagini mostrano la configurazione con la fila3.\
+Il procedimento è uguale per la configurazione con la fila, ma cambiano gli indirizzi di rete delle file. 
 ![](img/vpn/confScreen1.png)
 ![](img/vpn/confScreen2.png)
 ![](img/vpn/confScreen3.png)
